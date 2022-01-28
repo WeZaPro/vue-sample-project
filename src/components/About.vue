@@ -27,7 +27,6 @@ export default {
         liffId: "1656824759-Wq3mAOG4",
       })
       .then((res) => {
-        console.log("res--> "+res);
         if (!liff.isLoggedIn()) liff.login();
 
         liff.getProfile().then((profile) => {

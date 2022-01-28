@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <HelloWorld msg="Welcome to Your Vue.js App" />
     <h2>user id</h2>
     <div>{{ userId }}</div>
     <hr />
@@ -11,10 +11,14 @@
 
 <script>
 // @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
 import liff from "@line/liff";
 
 export default {
-  name: "About",
+  name: "Home",
+  components: {
+    HelloWorld,
+  },
   data() {
     return {
       msg: "",
@@ -27,8 +31,9 @@ export default {
         liffId: "1656824759-Wq3mAOG4",
       })
       .then((res) => {
-        console.log("res--> "+res);
         if (!liff.isLoggedIn()) liff.login();
+
+        console.log("res--> "+res);
 
         liff.getProfile().then((profile) => {
           const userId = profile.userId;
