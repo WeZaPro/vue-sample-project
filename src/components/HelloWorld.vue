@@ -4,7 +4,7 @@
     <h2>user id</h2>
     <div>{{ userId }}</div>
     <hr />
-    <h2>URL</h2>
+    <h2>URL----</h2>
     <div>{{ msg }}</div>
   </div>
 </template>
@@ -43,4 +43,6 @@ export default {
   },
   methods: {},
 };
+
+// url = https://vue-project-sample.herokuapp.com/
 </script>
